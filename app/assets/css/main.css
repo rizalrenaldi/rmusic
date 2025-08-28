@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-m-mute: #464743;
+  --color-m-darkest: #53544F;
+  --color-m-darker: #5E5F5A;
+  --color-m-light: #E2DFD3;
+  --color-m-blue: #8BDDE1;
+  --color-m-border: rgba(255,255,255,0.15);
+
+   --font-sans: neue-haas-grotesk-display, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.dline {
+  background-image: repeating-linear-gradient(-45deg, #53544F 10px, #53544F 20px, transparent 20px, transparent 30px);
+}
+
+.triangle {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 4px 0 4px 6px;
+   border-color: transparent transparent transparent var(--color-m-light);
+   transform: rotate(0deg);
+}
+
+.triangle-dark {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent var(--color-m-darker);
+  transform: rotate(0deg);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1
+}

@@ -1,0 +1,25 @@
+{
+  "window.title": "${activeEditorShort}${separator}${rootName}${separator}[Branch: main]",
+  "editor.formatOnSave": false,
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": false,
+  "prettier.arrowParens": "avoid",
+  "prettier.semi": false,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.formatOnPaste": false,
+  "html.format.wrapLineLength": 0
+}
