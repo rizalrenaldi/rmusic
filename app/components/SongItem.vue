@@ -28,7 +28,7 @@
         width="200"
         height="200"
         loading="lazy"
-        class="will-change-transform z-50 shadow-2xl shadow-m-mute absolute top-1/2 -translate-y-1/2 pointer-events-none"
+        class="will-change-transform z-50 absolute top-1/2 -translate-y-1/2 pointer-events-none"
         :style="isCoverShown ? `left: ${coverX}px; transform:rotate(${rotation}deg);` : ''"
       />
     </transition>
