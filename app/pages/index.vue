@@ -1,176 +1,118 @@
 <template>
   <div class="min-h-screen bg-m-darker text-m-light">
-    <div class="p-6 flex items-center gap-[4vw]">
-      <div class="flex items-stretch gap-6">
-        <div class="aspect-square w-24 grid grid-cols-2 grid-rows-2">
-          <div
-            @click="playSound('soundOne')"
-            class="cursor-pointer flex-1 rounded-full bg-m-blue aspect-square transition duration-200 active:scale-90 active:opacity-40 relative group hover:z-50"
-          >
-            <div class="w-full aspect-square bg-white/30 transition duration-200 will-change-transform group-hover:scale-[1.3] absolute inset-0 rounded-full"></div>
-            <div class="w-full aspect-square bg-m-blue flex items-center justify-center absolute inset-0 rounded-full">
-              <div
-                v-if="!isPlaying"
-                class="scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-[2] transition duration-200 triangle-dark scale-[2] ml-1"
-              ></div>
-            </div>
-          </div>
-          <div
-            @click="playSound('soundTwo')"
-            class="cursor-pointer flex-1 rounded-full bg-m-blue aspect-square transition duration-200 active:scale-90 active:opacity-40 relative group hover:z-50"
-          >
-            <div class="w-full aspect-square bg-white/30 transition duration-200 will-change-transform group-hover:scale-[1.3] absolute inset-0 rounded-full"></div>
-            <div class="w-full aspect-square bg-m-blue flex items-center justify-center absolute inset-0 rounded-full">
-              <div
-                v-if="!isPlaying"
-                class="scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-[2] transition duration-200 triangle-dark scale-[2] ml-1"
-              ></div>
-            </div>
-          </div>
-          <div
-            @click="playSound('soundThree')"
-            class="cursor-pointer flex-1 rounded-full bg-m-blue aspect-square transition duration-200 active:scale-90 active:opacity-40 relative group hover:z-50"
-          >
-            <div class="w-full aspect-square bg-white/30 transition duration-200 will-change-transform group-hover:scale-[1.3] absolute inset-0 rounded-full"></div>
-            <div class="w-full aspect-square bg-m-blue flex items-center justify-center absolute inset-0 rounded-full">
-              <div
-                v-if="!isPlaying"
-                class="scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-[2] transition duration-200 triangle-dark scale-[2] ml-1"
-              ></div>
-            </div>
-          </div>
-          <div
-            @click="playSound('soundFour')"
-            class="cursor-pointer flex-1 rounded-full bg-m-blue aspect-square transition duration-200 active:scale-90 active:opacity-40 relative group hover:z-50"
-          >
-            <div class="w-full aspect-square bg-white/30 transition duration-200 will-change-transform group-hover:scale-[1.3] absolute inset-0 rounded-full"></div>
-            <div class="w-full aspect-square bg-m-blue flex items-center justify-center absolute inset-0 rounded-full">
-              <div
-                v-if="!isPlaying"
-                class="scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-[2] transition duration-200 triangle-dark scale-[2] ml-1"
-              ></div>
-            </div>
-          </div>
+    <div class="lg:hidden min-h-screen flex flex-col items-center justify-center">
+      <span class="block text-4xl font-bold mb-2">Music.</span>
+      <span class="block mb-2 max-w-sm text-center mx-auto">I'm sorry, but mobile is currently not supported. While you here, you can tap one of these four circles, and let's see if you know the song!</span>
+      <div class="size-72 flex items-center justify-center">
+        <Sounds class="scale-[2.5]" />
 
-          <audio
-            ref="soundOne"
-            preload="auto"
-            class="sound"
-            src="/v.wav"
-          ></audio>
-          <audio
-            ref="soundTwo"
-            preload="auto"
-            class="sound"
-            src="/p.wav"
-          ></audio>
-          <audio
-            ref="soundThree"
-            preload="auto"
-            class="sound"
-            src="/j.wav"
-          ></audio>
-          <audio
-            ref="soundFour"
-            preload="auto"
-            class="sound"
-            src="/s.wav"
-          ></audio>
-        </div>
-        <h1 class="text-8xl font-bold select-none leading-none">Music.</h1>
-      </div>
-
-      <div class="flex-1 flex justify-end">
-        <div class="flex gap-6 justify-end">
-          <div class="w-1/2">
-            <div class="text-sm font-semibold mb-1">CD Collection Database</div>
-            <p class="text-xs leading-relaxed">My personal CD collection tracker website, contains currently owns CDs and my wishlist.
-              <NuxtLink
-                to="https://theplaydept.com"
-                target="_blank"
-                class="inline-flex ml-1 overflow-hidden group"
-              >
-                <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
-                  <span class="block w-4">&rarr;</span>
-                  <span class="block">Visit</span>
-                  <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
-                </span>
-              </NuxtLink>
-            </p>
-          </div>
-          <div class="text-sm font-semibold">
-            <div class="text-sm font-semibold mb-1">Miscellaneous.</div>
-            <ul class="font-normal text-xs leading-relaxed">
-              <li>
-                <NuxtLink
-                  to="https://twitter.com/theplaydept"
-                  target="_blank"
-                  class="flex overflow-hidden group"
-                >
-                  <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
-                    <span class="block w-4">&rarr;</span>
-                    <span class="block">ThePlayDept.</span>
-                    <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
-                  </span>
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="https://glm.rizalrenaldi.com"
-                  target="_blank"
-                  class="flex overflow-hidden group"
-                >
-                  <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
-                    <span class="block w-4">&rarr;</span>
-                    <span class="block">God-like Musicians</span>
-                    <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
-                  </span>
-                </NuxtLink>
-              </li>
-            </ul>
-
-          </div>
-          <!-- <div class="w-1/3 text-sm font-semibold">Cd Collection Database</div> -->
-        </div>
       </div>
     </div>
-    <!-- <div>{{ max }}</div> -->
-    <div v-if="music">
-      <div
-        ref="list"
-        class="songs-container"
-      >
-        <div class="select-none px-6 w-full h-10 border-b text-xs border-m-border flex items-center gap-6 relative">
-          <div class="flex-1 flex items-center gap-4 opacity-50">
-            <div class="w-9 text-xs opacity-50"></div>
-            <div class="flex-1 line-clamp-1">SONG</div>
-          </div>
-          <div class="flex-1 line-clamp-1 opacity-50">ARTIST</div>
-          <div class="flex-1 line-clamp-1 opacity-50">ALBUM</div>
-          <div class="flex-1 opacity-50">GENRE</div>
-          <div class="w-10"></div>
+    <div class="hidden lg:block">
+      <div class="p-6 flex items-center gap-[4vw]">
+        <div class="flex items-stretch gap-6">
+          <Sounds />
+          <h1 class="text-8xl font-bold select-none leading-none tracking-[-0.015em]">Music.</h1>
         </div>
-        <SongItem
-          v-for="(item, idx) in music"
-          :idx="idx + 1"
-          :title="item.title"
-          :artist="item.artist"
-          :album="item.album"
-          :genre="item.genre"
-          :cover="item.cover_image"
-          :link="item.youtube_url"
-          :coverShown="coverActive"
-          :coverX="mx"
-          :coverY="my"
-          :rotation="rotation"
-          :isCoverShown="isCoverShown"
-          @mouseenter="coverEnter(idx + 1)"
-          @mouseleave="coverLeave"
-        />
-      </div>
 
-      <div ref="loadmore">
-        <InfiniteScrollTrigger :show-loader="loadMoreStatus === 'loading'" />
+        <div class="flex-1 flex justify-end">
+          <div class="flex gap-6 justify-end">
+            <div class="w-1/2">
+              <div class="size-5 rounded-full mb-2 border border-m-light flex items-center justify-center">
+                <div class="size-1.5 rounded-full border border-m-light"></div>
+              </div>
+              <div class="text-sm font-semibold mb-1">CD Collection Database</div>
+              <p class="text-xs leading-relaxed pr-20">My personal CD collection tracker website includes the CDs I own and my wishlist.
+                <NuxtLink
+                  to="https://theplaydept.com"
+                  target="_blank"
+                  class="inline-flex ml-1 overflow-hidden group"
+                >
+                  <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
+                    <span class="block w-4">&rarr;</span>
+                    <span class="block">Visit</span>
+                    <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                  </span>
+                </NuxtLink>
+              </p>
+            </div>
+            <div class="w-1/3 text-sm font-semibold">
+              <div class="size-5 rounded mb-2 border border-m-light flex items-center justify-center">
+                <div class="size-1.5 rounded-full bg-m-light"></div>
+              </div>
+              <div class="text-sm font-semibold mb-1">Miscellaneous.</div>
+              <ul class="font-normal text-xs leading-relaxed">
+                <li>
+                  <NuxtLink
+                    to="https://twitter.com/theplaydept"
+                    target="_blank"
+                    class="flex overflow-hidden group"
+                  >
+                    <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
+                      <span class="block w-4">&rarr;</span>
+                      <span class="block">ThePlayDept.</span>
+                      <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                    </span>
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="https://glm.rizalrenaldi.com"
+                    target="_blank"
+                    class="flex overflow-hidden group"
+                  >
+                    <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
+                      <span class="block w-4">&rarr;</span>
+                      <span class="block">God-like Musicians</span>
+                      <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                    </span>
+                  </NuxtLink>
+                </li>
+              </ul>
+
+            </div>
+            <!-- <div class="w-1/3 text-sm font-semibold">Cd Collection Database</div> -->
+          </div>
+        </div>
+      </div>
+      <!-- <div>{{ max }}</div> -->
+      <div v-if="music">
+        <div
+          ref="list"
+          class="songs-container"
+        >
+          <div class="select-none px-6 w-full h-10 border-b text-xs border-m-border flex items-center gap-6 relative">
+            <div class="flex-1 flex items-center gap-4 opacity-50">
+              <div class="w-9 text-xs opacity-50"></div>
+              <div class="flex-1 line-clamp-1">SONG</div>
+            </div>
+            <div class="flex-1 line-clamp-1 opacity-50">ARTIST</div>
+            <div class="flex-1 line-clamp-1 opacity-50">ALBUM</div>
+            <div class="flex-1 opacity-50">GENRE</div>
+            <div class="w-10"></div>
+          </div>
+          <SongItem
+            v-for="(item, idx) in music"
+            :idx="idx + 1"
+            :title="item.title"
+            :artist="item.artist"
+            :album="item.album"
+            :genre="item.genre"
+            :cover="item.cover_image"
+            :link="item.youtube_url"
+            :coverShown="coverActive"
+            :coverX="mx"
+            :coverY="my"
+            :rotation="rotation"
+            :isCoverShown="isCoverShown"
+            @mouseenter="coverEnter(idx + 1)"
+            @mouseleave="coverLeave"
+          />
+        </div>
+
+        <div ref="loadmore">
+          <InfiniteScrollTrigger :show-loader="loadMoreStatus === 'loading'" />
+        </div>
       </div>
     </div>
   </div>
@@ -245,12 +187,6 @@ const rotation = computed(() => {
   return ((clamped - 60) / (windowWidth.value - 320)) * 30 - 15
 })
 
-// target Y (optional)
-// const targetY = computed(() => {
-//   const mouseY = y.value || windowHeight.value / 2
-//   return Math.max(100, Math.min(mouseY, windowHeight.value - 100))
-// })
-
 // actual value with inertia
 const mx = ref(targetX.value)
 const speed = 0.1
@@ -259,64 +195,6 @@ function animate() {
   mx.value += (targetX.value - mx.value) * speed
   // my.value += (targetY.value - my.value) * speed
   requestAnimationFrame(animate)
-}
-
-// function coverMouseEnter(id) {
-//   coverActive.value = id
-// }
-// function coverMouseLeave() {
-//   coverActive.value = null
-// }
-
-// --- Sounds ---
-const soundOne = ref(null)
-const soundTwo = ref(null)
-const soundThree = ref(null)
-const soundFour = ref(null)
-const sounds = { soundOne, soundTwo, soundThree, soundFour }
-const isPlaying = ref("")
-
-function stopAllSounds() {
-  Object.values(sounds).forEach(s => {
-    if (s.value) {
-      s.value.pause()
-      s.value.currentTime = 0
-    }
-  })
-}
-
-// function playSound(sound) {
-//   if (isPlaying.value === sound) {
-//     stopAllSounds()
-//     isPlaying.value = ''
-//   } else {
-//     stopAllSounds()
-//     isPlaying.value = sound
-//     sounds[sound].value?.play()
-//   }
-// }
-
-function playSound(sound) {
-  if (isPlaying.value === sound) {
-    stopAllSounds()
-    isPlaying.value = ''
-  } else {
-    stopAllSounds()
-    isPlaying.value = sound
-
-    const audio = sounds[sound].value
-    if (audio) {
-      audio.currentTime = 0 // optional: restart from beginning
-      audio.play()
-
-      // detect when finished
-      audio.onended = () => {
-        if (isPlaying.value === sound) {
-          isPlaying.value = ''
-        }
-      }
-    }
-  }
 }
 
 // --- Fetch total count once ---
