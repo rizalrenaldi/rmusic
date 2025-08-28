@@ -18,7 +18,9 @@ export default defineNuxtConfig({
     head: {
       title: "Music. | rizal˙",
        link: [
-       {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
+        {rel: 'icon', href: '/favicon.png'},
         {rel: 'stylesheet', type: 'text/css', href: 'https://use.typekit.net/eok3igd.css'}
       ],
     }
