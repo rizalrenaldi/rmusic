@@ -14,6 +14,9 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+    devServer: {
+        host: "0.0.0.0"
+    },
   app: {
     head: {
       title: "Music. | rizal˙",

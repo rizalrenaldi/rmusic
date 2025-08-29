@@ -21,5 +21,8 @@
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 120,
   "editor.formatOnPaste": false,
-  "html.format.wrapLineLength": 0
+  "html.format.wrapLineLength": 0,
+  "terminal.integrated.env.linux": {
+    "NVMRC": "20"
+  }
 }
