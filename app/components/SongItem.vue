@@ -5,7 +5,7 @@
     @mouseleave="outHandler"
   >
     <div class="flex-1 flex items-center gap-4">
-      <div class="w-9 text-xs opacity-50">0{{ idx }}</div>
+      <div class="w-9 text-[11px] opacity-50 tabular-nums">{{ num }}</div>
       <div class="flex-1 line-clamp-1">{{ title }}</div>
     </div>
     <div class="flex-1 line-clamp-1">{{ artist }}</div>
@@ -37,7 +37,7 @@
 
 <script setup>
 defineProps([
-  'idx', 'title', 'artist', 'album', 'genre', 'link', 'cover', 'coverShown', 'coverX', 'coverY', 'rotation', 'isCoverShown'
+  'idx', 'num', 'title', 'artist', 'album', 'genre', 'link', 'cover', 'coverShown', 'coverX', 'coverY', 'rotation', 'isCoverShown'
 ])
 
 const emit = defineEmits(['mouseenter', 'mouseleave'])

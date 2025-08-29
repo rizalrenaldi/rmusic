@@ -94,6 +94,7 @@
           <SongItem
             v-for="(item, idx) in music"
             :idx="idx + 1"
+            :num="formatNumber(max - idx)"
             :title="item.title"
             :artist="item.artist"
             :album="item.album"
@@ -262,4 +263,11 @@ watch(targetIsVisible, async (visible) => {
 
   await getMoreSongs()
 })
+
+function formatNumber(num) {
+  const width = String(Math.trunc(Math.abs(max.value))).length || 1;
+  const sign = num < 0 ? "-" : "";
+  const digits = String(Math.trunc(Math.abs(num)));
+  return sign + digits.padStart(width, "0");
+}
 </script>
