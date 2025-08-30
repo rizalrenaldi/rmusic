@@ -26,6 +26,13 @@ export default defineNuxtConfig({
         {rel: 'icon', href: '/favicon.png'},
         {rel: 'stylesheet', type: 'text/css', href: 'https://use.typekit.net/eok3igd.css'}
       ],
+       script: [
+        {
+          src: process.env.NODE_ENV === 'production' ? "https://ssstats.vercel.app/script.js" : '',
+          defer: true,
+          "data-website-id": "a6a51ef0-2aaa-4231-affa-f6da268f856d"
+        }
+      ]
     }
   }
 })
