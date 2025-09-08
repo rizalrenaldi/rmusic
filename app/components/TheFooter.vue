@@ -1,11 +1,14 @@
 <template>
   <footer class="fixed w-full bottom-0 flex items-center justify-between h-12 px-4 text-xs border-t bg-m-darker border-m-border text-m-light">
-    <div class="absolute left-0 pointer-events-none w-full h-24 from-m-darker bg-gradient-to-t top-[-97px]"></div>
+    <div
+      v-if="route.name === 'index'"
+      class="absolute left-0 pointer-events-none w-full h-24 from-m-darker bg-gradient-to-t top-[-97px]"
+    ></div>
 
     <div class="flex items-center justify-between w-full">
       <span class="flex-1 w-full lg:w-1/5">{{ year }} &hearts; Indonesia / ID</span>
       <span class="flex-1 hidden text-center md:block">{{ selectedQuote
-      }}</span>
+        }}</span>
       <div class="flex items-center justify-end flex-1 w-full lg:w-1/5">
         <NuxtLink
           to="https://rizalrenaldi.com"
@@ -53,6 +56,7 @@
 </template>
 
 <script setup>
+const route = useRoute()
 const year = new Date().getFullYear()
 const quotes = [
   'Sometimes music is all you need.',

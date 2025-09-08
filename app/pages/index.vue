@@ -1,121 +1,131 @@
 <template>
   <div class="lg:min-h-screen bg-m-darker text-m-light">
-    <div class="lg:hidden h-dvh flex flex-col items-center justify-start pt-28">
-      <span class="block text-4xl font-bold mb-2">Music.</span>
-      <span class="block mb-2 max-w-sm text-center mx-auto px-6">I'm sorry, but mobile is currently not supported. While you're here, you can tap one of these four circles to see if you know the song!</span>
-      <div class="size-72 flex items-center justify-center">
-        <Sounds class="scale-[2.5]" />
-
+    <!-- <div class=""> -->
+    <div class="p-6 flex items-center gap-[4vw]">
+      <div class="flex items-stretch gap-6 flex-1">
+        <Sounds />
+        <h1 class="text-8xl font-bold select-none leading-none tracking-[-0.015em]">Music.</h1>
       </div>
-    </div>
-    <div class="hidden lg:block">
-      <div class="p-6 flex items-center gap-[4vw]">
-        <div class="flex items-stretch gap-6">
-          <Sounds />
-          <h1 class="text-8xl font-bold select-none leading-none tracking-[-0.015em]">Music.</h1>
-        </div>
 
-        <div class="flex-1 flex justify-end">
-          <div class="flex gap-6 justify-end">
-            <div class="w-1/2">
-              <div class="size-5 rounded-full mb-2 border border-m-light flex items-center justify-center">
-                <div class="size-1.5 rounded-full border border-m-light"></div>
-              </div>
-              <div class="text-sm font-semibold mb-1">CD Collection Database</div>
-              <p class="text-xs leading-relaxed pr-20">My personal CD collection tracker website includes the CDs I own and my wishlist.
+      <div class="w-[51%] flex justify-start">
+        <div class="flex gap-2 xl:gap-6">
+          <NuxtLink
+            to="https://cd.rizalrenaldi.com"
+            target="_blank"
+            class="flex-1 group"
+          >
+            <div class="size-5 rounded-full mb-2 border border-m-light transition duration-200 group-hover:border-m-blue flex items-center justify-center">
+              <div class="size-1.5 rounded-full border border-m-light transition duration-200 group-hover:border-m-blue"></div>
+            </div>
+            <span class="block text-sm font-semibold mb-1 transition duration-200 group-hover:text-m-blue">CD Collection Database</span>
+            <p class="text-xs leading-relaxed pr-10 2xl:pr-20">My personal CD collection tracker website includes the CDs I own and my wishlist.
+              <span class="inline-flex ml-1 overflow-hidden group">
+                <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0 group-hover:text-m-blue">
+                  <span class="block w-4">&rarr;</span>
+                  <span class="block">Visit</span>
+                  <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                </span>
+              </span>
+            </p>
+          </NuxtLink>
+          <NuxtLink
+            to="/every-track-hits"
+            class="flex-1 group"
+          >
+            <TrackIcon class="mb-2 transition duration-200 group-hover:text-m-blue" />
+            <span class="block text-sm font-semibold mb-1 transition duration-200 group-hover:text-m-blue">EveryTrackHits.</span>
+            <p class="text-xs leading-relaxed pr-10 2xl:pr-20">My personal favourite albums that contains banger tracks from start to finish.
+              <span class="inline-flex ml-1 overflow-hidden">
+                <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0 group-hover:text-m-blue">
+                  <span class="block w-4">&rarr;</span>
+                  <span class="block">Visit</span>
+                  <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                </span>
+              </span>
+            </p>
+          </NuxtLink>
+          <div class="w-32 2xl:flex-1 text-sm font-semibold">
+            <div class="size-5 rounded mb-2 border border-m-light flex items-center justify-center">
+              <div class="size-1.5 rounded-full bg-m-light"></div>
+            </div>
+            <div class="text-sm font-semibold mb-1">Miscellaneous.</div>
+            <ul class="font-normal text-xs leading-relaxed">
+
+              <li>
                 <NuxtLink
-                  to="https://theplaydept.com"
+                  to="https://twitter.com/theplaydept"
                   target="_blank"
-                  class="inline-flex ml-1 overflow-hidden group"
+                  external
+                  class="flex overflow-hidden group hover:text-amber-300"
                 >
                   <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
                     <span class="block w-4">&rarr;</span>
-                    <span class="block">Visit</span>
+                    <span class="block">ThePlayDept.</span>
                     <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
                   </span>
                 </NuxtLink>
-              </p>
-            </div>
-            <div class="w-1/3 text-sm font-semibold">
-              <div class="size-5 rounded mb-2 border border-m-light flex items-center justify-center">
-                <div class="size-1.5 rounded-full bg-m-light"></div>
-              </div>
-              <div class="text-sm font-semibold mb-1">Miscellaneous.</div>
-              <ul class="font-normal text-xs leading-relaxed">
-                <li>
-                  <NuxtLink
-                    to="https://twitter.com/theplaydept"
-                    target="_blank"
-                    class="flex overflow-hidden group"
-                  >
-                    <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
-                      <span class="block w-4">&rarr;</span>
-                      <span class="block">ThePlayDept.</span>
-                      <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
-                    </span>
-                  </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink
-                    to="https://glm.rizalrenaldi.com"
-                    target="_blank"
-                    class="flex overflow-hidden group"
-                  >
-                    <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
-                      <span class="block w-4">&rarr;</span>
-                      <span class="block">God-like Musicians</span>
-                      <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
-                    </span>
-                  </NuxtLink>
-                </li>
-              </ul>
+              </li>
+              <li>
+                <NuxtLink
+                  to="https://glm.rizalrenaldi.com"
+                  target="_blank"
+                  class="flex overflow-hidden group hover:text-amber-300"
+                >
+                  <span class="flex items-center -translate-x-4 transition duration-200 group-hover:translate-x-0">
+                    <span class="block w-4">&rarr;</span>
+                    <span class="block">God-like Musicians</span>
+                    <span class="block ml-0.5 transition duration-200 group-hover:opacity-0">&nearr;</span>
+                  </span>
+                </NuxtLink>
+              </li>
+            </ul>
 
-            </div>
-            <!-- <div class="w-1/3 text-sm font-semibold">Cd Collection Database</div> -->
           </div>
-        </div>
-      </div>
-      <!-- <div>{{ max }}</div> -->
-      <div v-if="music">
-        <div
-          ref="list"
-          class="songs-container"
-        >
-          <div class="select-none px-6 w-full h-10 border-b text-xs border-m-border flex items-center gap-6 relative">
-            <div class="flex-1 flex items-center gap-4 opacity-50">
-              <div class="w-9 text-xs opacity-50"></div>
-              <div class="flex-1 line-clamp-1">SONG</div>
-            </div>
-            <div class="flex-1 line-clamp-1 opacity-50">ARTIST</div>
-            <div class="flex-1 line-clamp-1 opacity-50">ALBUM</div>
-            <div class="flex-1 opacity-50">GENRE</div>
-            <div class="w-10"></div>
-          </div>
-          <SongItem
-            v-for="(item, idx) in music"
-            :idx="idx + 1"
-            :num="formatNumber(max - idx)"
-            :title="item.title"
-            :artist="item.artist"
-            :album="item.album"
-            :genre="item.genre"
-            :cover="item.cover_image"
-            :link="item.youtube_url"
-            :coverShown="coverActive"
-            :coverX="mx"
-            :coverY="my"
-            :rotation="rotation"
-            :isCoverShown="isCoverShown"
-            @mouseenter="coverEnter(idx + 1)"
-            @mouseleave="coverLeave"
-          />
-        </div>
-
-        <div ref="loadmore">
-          <InfiniteScrollTrigger :show-loader="loadMoreStatus === 'loading'" />
+          <!-- <div class="w-1/3 text-sm font-semibold">Cd Collection Database</div> -->
         </div>
       </div>
     </div>
+    <!-- <div>{{ max }}</div> -->
+    <div v-if="music">
+      <div
+        ref="list"
+        class="songs-container"
+      >
+        <div class="select-none px-6 w-full h-10 border-b text-xs border-m-border flex items-center gap-6 relative">
+          <div class="flex-1 flex items-center gap-4 opacity-50">
+            <div class="w-9 text-xs opacity-50"></div>
+            <div class="flex-1 line-clamp-1">SONG</div>
+          </div>
+          <div class="flex-1 line-clamp-1 opacity-50">ARTIST</div>
+          <div class="flex-1 line-clamp-1 opacity-50">ALBUM</div>
+          <div class="flex-1 opacity-50">GENRE</div>
+          <div class="w-10"></div>
+        </div>
+        <SongItem
+          v-for="(item, idx) in music"
+          :idx="idx + 1"
+          :num="formatNumber(max - idx)"
+          :title="item.title"
+          :artist="item.artist"
+          :album="item.album"
+          :genre="item.genre"
+          :cover="item.cover_image"
+          :link="item.youtube_url"
+          :coverShown="coverActive"
+          :coverX="mx"
+          :coverY="my"
+          :rotation="rotation"
+          :isCoverShown="isCoverShown"
+          @mouseenter="coverEnter(idx + 1)"
+          @mouseleave="coverLeave"
+        />
+      </div>
+
+      <div ref="loadmore">
+        <InfiniteScrollTrigger :show-loader="loadMoreStatus === 'loading'" />
+      </div>
+    </div>
+    <!-- </div> -->
   </div>
 </template>
 

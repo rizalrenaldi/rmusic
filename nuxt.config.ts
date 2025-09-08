@@ -4,7 +4,17 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/scripts', '@vueuse/nuxt', '@nuxtjs/supabase'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/scripts', '@vueuse/nuxt', '@nuxtjs/supabase', '@hypernym/nuxt-gsap'],
+  gsap: {
+    extraEases: {
+      custom: true
+    }
+  },
+  image: {
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/rizal'
+    }
+  },
   supabase: {
     redirect: false
   },
