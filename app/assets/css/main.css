@@ -33,6 +33,10 @@
   transform: rotate(0deg);
 }
 
+.song:hover .triangle {
+  border-color: transparent transparent transparent var(--color-amber-300);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   opacity: 0;

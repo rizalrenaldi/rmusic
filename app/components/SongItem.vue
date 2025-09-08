@@ -14,9 +14,9 @@
     <NuxtLink
       :to="link"
       target="_blank"
-      class="w-10 flex items-center gap-2 group/item"
+      class="w-10 flex items-center gap-2 group/item play"
     >
-      <span class="block transition duration-200 group-hover:translate-x-0 translate-x-2 opacity-0 group-hover:opacity-100 group-hover:text-amber-300">Play</span>
+      <span class="block transition duration-200 group-hover:translate-x-0 translate-x-2 opacity-0 group-hover:opacity-100 group-hover:text-amber-300 group-hover/item:-translate-x-1">Play</span>
       <div class="triangle group-hover:opacity-100 opacity-25 transition duration-200"></div>
     </NuxtLink>
 
